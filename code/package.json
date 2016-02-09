@@ -13,5 +13,12 @@
     "bower": "^1.4.1",
     "gulp-util": "^3.0.4",
     "shelljs": "^0.4.0"
-  }
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-media",
+    "org.apache.cordova.media",
+    "org.apache.cordova.inappbrowser",
+    "com.ionic.keyboard"
+  ],
+  "cordovaPlatforms": []
 }

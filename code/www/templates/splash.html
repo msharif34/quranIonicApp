@@ -1,0 +1,50 @@
+<ion-view view-title="QuranApp" hide-nav-bar="true" class="splash-page">
+  <ion-content scroll="false">
+    <div class="padding logo">
+      <h1>QuranApp</h1>
+    </div>
+    <div class="login-form">
+      <div class="card">
+        <div class="list">
+          <label class="item item-input">
+            <input type="text" ng-model="form.email" placeholder="Enter your {{ form.signingUp ? 'desired' : 'songhop' }} Email">
+          </label>
+           <label class="item item-input">
+            <input type="password" ng-model="form.password" placeholder="Enter your {{ form.signingUp ? 'desired' : 'songhop' }} password">
+          </label>
+        </div>
+      </div>
+      <div class="padding-left padding-right">
+        <button class="button button-block action-button" ng-class="{'button-positive': !form.signingUp, 'button-balanced': form.signingUp}" ng-click="signupEmail(form.email, form.password, form.signingUp)">
+          {{ form.signingUp ? 'Sign up' : 'Sign in' }}
+        </button>
+      </div>
+    </div>
+    <div class="padding signup-opt" ng-click="form.signingUp = !form.signingUp">
+      {{ form.signingUp ? 'Have an account? Sign in!' : 'Need an account? Sign up!' }}
+    </div>
+  </ion-content>
+
+   <!--  <ion-content>
+    <div class="list">
+      <ion-audio-track ng-repeat="track in tracks" track="track">
+        <div class="card">
+          <div class="item item-thumbnail-left">
+            <img src="{{track.art}}">
+
+            <h2>{{track.title}}</h2>
+
+            <p>{{track.artist}}</p>
+            <ion-audio-controls>
+              <a class="button button-icon icon" ion-audio-play></a>
+              <ion-spinner icon="ios" style="position: relative; top: 8px; left: 4px"></ion-spinner>
+            </ion-audio-controls>
+          </div>
+          <div class="item item-divider">
+            <ion-audio-progress-bar display-time></ion-audio-progress-bar>
+          </div>
+        </div>
+      </ion-audio-track>
+    </div>
+  </ion-content> -->
+</ion-view>

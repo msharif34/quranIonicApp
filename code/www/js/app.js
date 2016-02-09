@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('songhop', ['ionic', 'songhop.controllers'])
+angular.module('quranApp', ['ionic', 'quranApp.controllers', 'firebase', 'ionic-audio'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -59,16 +59,25 @@ angular.module('songhop', ['ionic', 'songhop.controllers'])
         }
       }
     })
+
+    // splash page
+  .state('splash', {
+    url: '/',
+    templateUrl: 'templates/splash.html',
+    controller: 'SplashCtrl'
+  })
   // If none of the above states are matched, use this as the fallback:
-  $urlRouterProvider.otherwise('/tab/discover');
+  // $urlRouterProvider.otherwise('/tab/discover');
+    $urlRouterProvider.otherwise('/');
+
 
 })
 
 
 .constant('SERVER', {
   // Local server
-  //url: 'http://localhost:3000'
+  url: 'http://localhost:3000'
 
   // Public Heroku server
-  url: 'https://ionic-songhop.herokuapp.com'
+  // url: 'https://ionic-songhop.herokuapp.com'
 });

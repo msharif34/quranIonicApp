@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.songhop616624" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>songhop</name>
+<widget id="com.ionicframework.quranhop616624" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>QuranHop</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Discover you favorite Quran reciters!
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="msharif34@gmail.com" href="http://mukhtarshariff.com/">
+      Mukhtar Shariff
     </author>
   <content src="index.html"/>
   <access origin="*"/>
@@ -14,6 +14,8 @@
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="BackupWebStorage" value="none"/>
+  <hook type="after_prepare" src="package-hooks/add_platform_class.js"/>
+  <hook type="after_prepare" src="package-hooks/ios9_allow_http.sh"/>
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
